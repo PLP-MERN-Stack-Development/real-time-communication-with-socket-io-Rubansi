@@ -51,6 +51,19 @@ socketio-chat/
   - Socket.io configuration templates
   - Sample components for the chat interface
 
+Quick demo server
+
+If you don't want to run the full React client, a minimal static demo client is available under `server/public` which connects to the Socket.io server and exercises the basic features (join, send message, typing indicator, private message).
+
+To run the demo server:
+
+```bash
+cd server
+npm install
+node server/server.js
+# open http://localhost:5000 in your browser
+```
+
 ## Requirements
 
 - Node.js (v18 or higher)
