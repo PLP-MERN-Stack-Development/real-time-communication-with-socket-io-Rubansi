@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Socket.io Chat Demo</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 1rem; }
+      #chat { border: 1px solid #ddd; padding: 1rem; height: 300px; overflow: auto; }
+      #users { margin-top: 1rem; }
+      .message { margin-bottom: 0.5rem; }
+      .system { color: #666; font-style: italic; }
+    </style>
+  </head>
+  <body>
+    <h2>Socket.io Chat Demo</h2>
+
+    <div>
+      <label>Username: <input id="username" placeholder="your name" /></label>
+      <button id="join">Join</button>
+      <button id="leave">Leave</button>
+    </div>
+
+    <div id="status">Status: <span id="conn">disconnected</span></div>
+
+    <div id="chat"></div>
+
+    <div>
+      <input id="messageInput" placeholder="Type a message" style="width:60%" />
+      <button id="send">Send</button>
+      <button id="privateSend">Send Private</button>
+      <select id="privateTo"><option value="">-- select user --</option></select>
+    </div>
+
+    <div id="typing"></div>
+
+    <div id="users"><strong>Users:</strong> <span id="userList">(none)</span></div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
